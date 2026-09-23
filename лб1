@@ -1,0 +1,66 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int variant;
+
+    cout << "Choose variant (16, 27, 31): ";
+    cin >> variant;
+
+    switch (variant) {
+
+        case 16: {
+            double x, y;
+
+            cout << "Enter x: ";
+            cin >> x;
+
+            y = 3 * x * x * x * x * x * x - 6 * x * x - 7;
+
+            cout << "y = " << y << endl;
+            break;
+        }
+
+        case 27: {
+            double S, V1, V2, T;
+
+            cout << "Enter S: ";
+            cin >> S;
+
+            cout << "Enter V1: ";
+            cin >> V1;
+
+            cout << "Enter V2: ";
+            cin >> V2;
+
+            cout << "Enter T: ";
+            cin >> T;
+
+            double S_new = S + (V1 + V2) * T;
+
+            cout << "New distance = " << S_new << endl;
+            break;
+        }
+
+        case 31: {
+            double a, b, c;
+
+            cout << "Enter a: ";
+            cin >> a;
+
+            cout << "Enter b: ";
+            cin >> b;
+
+            c = sqrt(a * a + b * b);
+
+            cout << "c = " << c << endl;
+            break;
+        }
+
+        default:
+            cout << "Invalid variant!" << endl;
+    }
+
+    return 0;
+}
